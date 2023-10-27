@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(0, "");
+
+    int zip;
+    int eshhkere = 0;
+    char cow;
+    int visa;
+
+    cout << " Сколько будет символов: ";
+    cin >> zip;
+
+    cout << " Какой символ будет использован: ";
+    cin >> cow;
+
+    cout << " Выберите положение: " << endl <<
+        "1. Горизонтально " << endl <<
+        "2. Вертикально " << endl;
+    cin >> visa;
+
+    while (eshhkere < zip)
+    {
+        switch (visa)
+        {
+        case 1:
+            cout << cow;
+            eshhkere++;
+            break;
+        case 2:
+            cout << cow << endl;
+            eshhkere++;
+            break;
+        default:
+            cout << " Ошибка ";
+            break;
+        }
+    }
+    cout << endl;
+
+}
