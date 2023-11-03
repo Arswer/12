@@ -3,40 +3,34 @@ using namespace std;
 
 int main() {
     setlocale(0, "");
+    cout << "1. Линия" << endl;
 
-    int zip;
-    int eshhkere = 0;
-    char cow;
-    int visa;
-
-    cout << " Сколько будет символов: ";
-    cin >> zip;
-
-    cout << " Какой символ будет использован: ";
-    cin >> cow;
-
-    cout << " Выберите положение: " << endl <<
-        "1. Горизонтально " << endl <<
-        "2. Вертикально " << endl;
-    cin >> visa;
-
-    while (eshhkere < zip)
-    {
-        switch (visa)
-        {
-        case 1:
-            cout << cow;
-            eshhkere++;
-            break;
-        case 2:
-            cout << cow << endl;
-            eshhkere++;
-            break;
-        default:
-            cout << " Ошибка ";
-            break;
-        }
-    }
+    int choice;
+    cin >> choice;
     cout << endl;
 
+    if (choice == 0) {
+        cout << "Выход из программы..." << endl;
+        return 0;
+    }
+    else if (choice < 1 || choice > 4) {
+        cout << "Ошибка! Некорректный выбор." << endl << endl;
+        return 0;
+    }
+
+    cout << "Введите символ: ";
+    char symbol;
+    cin >> symbol;
+
+    int length;
+    cout << "Введите длину линии: ";
+    cin >> length;
+
+    for (int i = 0; i < length; i++) {
+        cout << symbol << " ";
+    }
+
+    cout << endl;
+
+    return 0;
 }
